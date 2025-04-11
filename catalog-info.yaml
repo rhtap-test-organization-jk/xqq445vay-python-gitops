@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xqq445vay-python-gitops
+  description: This is GitOps manifest for xqq445vay-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=xqq445vay-python
+    backstage.io/kubernetes-id: xqq445vay-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: xqq445vay-python-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xqq445vay-python
